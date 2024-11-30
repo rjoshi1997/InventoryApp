@@ -170,12 +170,13 @@ export const styles = StyleSheet.create({
   //Modal
 
   inputTextView: {
-    flexDirection: 'row',
+    // flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
     borderWidth: 1,
     padding: 10,
     borderRadius: 5,
+    // marginTop: '5%',
   },
   usernameInputText: {
     backgroundColor: theme.colorWhite,
@@ -191,10 +192,10 @@ export const styles = StyleSheet.create({
     marginTop: '10%',
     marginBottom: '3%',
     borderRadius: 20,
-    backgroundColor: theme.colorBlack,
+    backgroundColor: theme.colorGp,
   },
   loginButtonText: {
-    color: theme.colorWhite,
+    color: theme.colorBlack,
     fontWeight: '600',
     fontSize: DeviceInfo.isTablet() ? 25 : 16,
   },

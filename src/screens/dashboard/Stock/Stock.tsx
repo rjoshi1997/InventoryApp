@@ -41,11 +41,11 @@ export const StockScreen = (props: any) => {
 
       <Pressable
         onPress={() => {
-          navigator.openAddStockScreen({pageName: 'Cetegory'});
+          navigator.openAddStockScreen({pageName: 'Category'});
         }}>
         <View style={styles.accountButtonContainer}>
           <View style={styles.sectionTitleContainer}>
-            <Text style={styles.sectionTitleText}>Cetegory</Text>
+            <Text style={styles.sectionTitleText}>Category</Text>
           </View>
           <View style={styles.sectionRightArrowContainer}>
             <Image
