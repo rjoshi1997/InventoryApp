@@ -73,7 +73,7 @@ export const styles = StyleSheet.create({
     borderTopWidth: 1,
     borderColor: theme.colorBorder,
     paddingTop: 10,
-    // marginBottom: 40,
+    marginBottom: 100,
   },
   addNewItemButtonView: {
     width: 60, // Set the width of the circle
@@ -115,7 +115,7 @@ export const styles = StyleSheet.create({
     color: theme.colorGray,
     fontSize: platform.getFontSize() + 4,
     // textAlign: 'center',
-    // fontWeight: '500',
+    fontWeight: '500',
   },
   listSliderText: {
     color: theme.colorBlack,
@@ -123,8 +123,14 @@ export const styles = StyleSheet.create({
     // textAlign: 'center',
     fontWeight: '500',
   },
+  listPriceText: {
+    color: theme.colorBlack,
+    fontSize: platform.getFontSize() + 8,
+    // textAlign: 'center',
+    fontWeight: '500',
+  },
   listItemDetailSection: {
-    width: '100%',
+    width: '60%',
     // backgroundColor: 'red',
     justifyContent: 'flex-start',
     padding: 10,
@@ -134,26 +140,28 @@ export const styles = StyleSheet.create({
   },
   sliderButtonContainer: {
     flex: 1,
-    // height: '80%',
     marginRight: '2%',
-    // marginTop: 10,
-    marginBottom: 10,
     flexDirection: 'row',
     justifyContent: 'flex-end',
   },
   sliderDeleteButton: {
+    zIndex: 999,
     borderWidth: 1,
     borderRadius: 10,
     borderColor: theme.colorRed,
     backgroundColor: theme.colorRed,
     justifyContent: 'center',
     alignItems: 'center',
-    height: '100%',
+    height: '85%',
+    width: '16%',
   },
   sliderButtonsContent: {
+    // width: '100%',
+    // height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
-    marginHorizontal: 16,
+    // marginHorizontal: 16,
+    // backgroundColor: 'black',
   },
   sliderImage: {
     alignSelf: 'center',
@@ -161,8 +169,10 @@ export const styles = StyleSheet.create({
     width: 25,
   },
   sliderText: {
+    // padding: '5%',
+    // marginHorizontal: 12,
     color: theme.colorWhite,
-    fontSize: platform.getFontSize() + 1,
+    fontSize: platform.getFontSize() + 3,
     textAlign: 'center',
     fontWeight: '500',
   },
@@ -198,5 +208,28 @@ export const styles = StyleSheet.create({
     color: theme.colorBlack,
     fontWeight: '600',
     fontSize: DeviceInfo.isTablet() ? 25 : 16,
+  },
+
+  referrerDropdown: {
+    width: '100%',
+    // marginTop: '5%',
+  },
+  fieldLabelText: {
+    fontSize: platform.getFontSize() + 6,
+    color: theme.colorBlack,
+    // backgroundColor: 'red',
+  },
+  dropdownItem: {
+    padding: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    borderBottomColor: 'gray',
+    borderBottomWidth: 1,
+  },
+  dropdownItemText: {
+    fontSize: platform.getFontSize() + 4,
+    color: theme.colorBlack,
+    textAlign: 'center',
+    fontWeight: '400',
   },
 });

@@ -12,6 +12,7 @@ import {theme} from '../../themes/default';
 import DeviceInfo from 'react-native-device-info';
 import imagePath from '../../constants/imagePath';
 import {StockScreen} from '../../screens/dashboard/Stock';
+import {BillingScreen} from '../../screens/dashboard/Billing';
 
 const window = Dimensions.get('screen');
 
@@ -41,7 +42,7 @@ export const BottomTabNavigator = () => {
 
   return (
     <BottomTab.Navigator
-      initialRouteName="Home"
+      initialRouteName="Billing"
       screenOptions={{
         tabBarStyle: {height: responsiveHeight},
         tabBarActiveTintColor: theme.colorBlack,
@@ -51,29 +52,9 @@ export const BottomTabNavigator = () => {
         },
       }}>
       <BottomTab.Screen
-        name="Home"
-        // children={() => <HomeNavigator />}
-        component={TabIcon}
-        options={{
-          headerTitle: 'INVENTORY',
-          headerTitleAlign: 'center',
-          unmountOnBlur: true,
-          tabBarIcon: ({focused}) => (
-            <Image
-              source={imagePath.tabIconHome}
-              style={[
-                {width: '90%', height: '90%'},
-                focused ? {opacity: 1} : {opacity: 0.2},
-              ]}
-              resizeMode="contain"
-            />
-          ),
-        }}
-      />
-      <BottomTab.Screen
         name="Billing"
         // children={() => <HomeNavigator />}
-        component={TabIcon}
+        component={BillingScreen}
         options={{
           headerTitle: 'INVENTORY',
           headerTitleAlign: 'center',
