@@ -8,4 +8,9 @@ const {getDefaultConfig, mergeConfig} = require('@react-native/metro-config');
  */
 const config = {};
 
+module.exports = (async () => {
+    const defaultConfig = await getDefaultConfig();
+    defaultConfig.watchFolders = [];
+    return defaultConfig;
+  })();
 module.exports = mergeConfig(getDefaultConfig(__dirname), config);

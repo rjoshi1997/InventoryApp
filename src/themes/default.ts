@@ -20,7 +20,7 @@ export const theme = {
   colorTabTitle: '#57ABB2',
   colorPOG: '#57ABB2',
   colorPopular: '#FF8CC144',
-  colorRed: '#FF0000',
+  colorRed: '#f94449',
   colorDesignBackground: '#E6E4E4',
   colorGp: '#b8d8be',
   colorTrans100: '#03000000',

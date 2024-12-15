@@ -1,7 +1,6 @@
 import {StyleSheet} from 'react-native';
 import {theme} from '../../../themes/default';
 import platform from '../../../../utils/platform';
-import DeviceInfo from 'react-native-device-info';
 
 export const styles = StyleSheet.create({
   accountButtonListContainer: {
@@ -192,11 +191,11 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.colorWhite,
     height: 40,
     width: '100%',
-    fontSize: DeviceInfo.isTablet() ? 25 : 16,
+    fontSize: 16,
   },
   loginButton: {
     width: '100%',
-    height: DeviceInfo.isTablet() ? 60 : 40,
+    height: 40,
     justifyContent: 'center',
     alignItems: 'center',
     marginTop: '10%',
@@ -207,11 +206,12 @@ export const styles = StyleSheet.create({
   loginButtonText: {
     color: theme.colorBlack,
     fontWeight: '600',
-    fontSize: DeviceInfo.isTablet() ? 25 : 16,
+    fontSize: 16,
   },
 
   referrerDropdown: {
     width: '100%',
+
     // marginTop: '5%',
   },
   fieldLabelText: {

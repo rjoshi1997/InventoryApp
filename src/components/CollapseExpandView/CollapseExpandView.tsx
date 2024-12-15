@@ -1,9 +1,9 @@
 import {Image, Pressable, ScrollView, Text, View} from 'react-native';
 import {styles} from './CollapseExpandView.style';
-import {useState} from 'react';
+import {memo, useState} from 'react';
 import imagePath from '../../constants/imagePath';
 
-export const CollapseExpandView = (props: any) => {
+export const CollapseExpandView = memo((props: any) => {
   const isShowBodyContentFlag = props.isShowBodyContent
     ? props.isShowBodyContent
     : false;
@@ -14,7 +14,10 @@ export const CollapseExpandView = (props: any) => {
   return (
     <View style={styles.container}>
       <Pressable
-        onPress={() => setIsShowBodyContent(!isShowBodyContent)}
+        onPress={() => {
+          props.selectedListData[props.headerTitle].isOpen = !isShowBodyContent;
+          setIsShowBodyContent(!isShowBodyContent);
+        }}
         style={[
           styles.headerView,
           isShowBodyContent ? {marginBottom: 10} : {},
@@ -39,4 +42,4 @@ export const CollapseExpandView = (props: any) => {
       </View>
     </View>
   );
-};
+});

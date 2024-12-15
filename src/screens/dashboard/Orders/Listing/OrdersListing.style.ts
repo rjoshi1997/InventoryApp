@@ -1,0 +1,157 @@
+import {StyleSheet} from 'react-native';
+import {theme} from '../../../../themes/default';
+import platform from '../../../../../utils/platform';
+
+export const styles = StyleSheet.create({
+  container: {
+    // flex: 1,
+    width: '100%',
+    height: '100%',
+  },
+  pressableListItem: {
+    // flex: 1,
+    backgroundColor: theme.colorWhite,
+    margin: '2%',
+    borderWidth: 1,
+    borderColor: theme.colorBorder,
+    borderRadius: 10,
+  },
+  listItemView: {
+    // flex: 1,
+    padding: 10,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  secondLineView: {
+    width: '95%',
+    alignSelf: 'center',
+    height: 50,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+  cutomerName: {
+    fontWeight: '700',
+    color: theme.colorBlack,
+    fontSize: platform.getFontSize() + 6,
+  },
+  cutomerPhone: {
+    color: theme.colorBlack,
+    fontSize: platform.getFontSize() + 4,
+  },
+  searchCloseIcon: {
+    width: '100%',
+    height: '100%',
+  },
+  itemSeparatorView: {
+    height: 1,
+    width: '95%',
+    marginLeft: '3%',
+    backgroundColor: theme.colorGray,
+  },
+  listItemStatus: {
+    padding: 2,
+    borderRadius: 10,
+    alignItems: 'center',
+    alignSelf: 'flex-start',
+  },
+  listItemId: {
+    marginTop: '1.5%',
+    color: theme.colorBlack,
+    width: '35%',
+    borderWidth: 1,
+    borderRadius: 100,
+    backgroundColor: theme.colorGp,
+  },
+  listItemIdText: {
+    textAlign: 'center',
+    fontWeight: '500',
+    color: theme.colorBlack,
+    fontSize: platform.getFontSize() + 6,
+  },
+  listItemPriceSection: {
+    alignItems: 'center',
+    width: '40%',
+    // backgroundColor: 'red',
+  },
+  listItemPriceText: {
+    fontSize: platform.getFontSize() + 2,
+    color: theme.colorBlack,
+    fontWeight: '700',
+  },
+  listItemDates: {
+    fontSize: platform.getFontSize() + 4,
+    fontWeight: '500',
+    color: theme.colorBlack,
+  },
+  listItemStatusText: {
+    color: theme.colorWhite,
+    fontSize: 12,
+    paddingLeft: '3%',
+    paddingRight: '3%',
+  },
+  priceSetReadyStatusText: {
+    color: theme.colorWhite,
+    fontSize: platform.getFontSize() + 2,
+    padding: 2,
+    fontWeight: '600',
+    paddingHorizontal: 12,
+  },
+  listRightArrow: {opacity: 0.7},
+  priceSetReadyToOrderStatus: {
+    padding: 2,
+    borderRadius: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+    alignSelf: 'flex-start',
+    marginTop: '2%',
+  },
+  priceSetReadyToOrderIcon: {
+    resizeMode: 'contain',
+    height: '90%',
+    width: platform.isIOS ? '28%' : '30%',
+  },
+  addNewOrderButton: {
+    backgroundColor: theme.colorWhite,
+    marginBottom: '2%',
+    marginTop: '2%',
+    padding: '3%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderColor: theme.colorGray,
+  },
+  addNewOrderPlusIcon: {
+    resizeMode: 'contain',
+    height: '100%',
+  },
+  addNewOrderButtonText: {color: theme.primaryColor, fontWeight: '700'},
+  orderSearchSection: {
+    backgroundColor: theme.colorWhite,
+    // marginVertical: '2%',
+    height: 'auto',
+    flexDirection: 'row',
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    borderBottomWidth: 1,
+    borderTopWidth: 1,
+    borderColor: theme.colorGray,
+  },
+  orderSearchIcon: {
+    width: '10%',
+    height: '70%',
+    opacity: 0.5,
+    resizeMode: 'contain',
+  },
+  orderSearchInput: {
+    width: '85%',
+    height: 40,
+    backgroundColor: theme.colorWhite,
+  },
+  orderSearchInputUnderline: {},
+});

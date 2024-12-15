@@ -20,6 +20,7 @@ import {PopupBox} from '../../../../components/PopupBox';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import {Dropdown} from 'react-native-element-dropdown';
 import {ConfirmBox} from '../../../../components/ConfirmBox';
+import React from 'react';
 
 export const AddStockScreen = (props: any) => {
   const navigation = useNavigation();
@@ -280,18 +281,23 @@ export const AddStockScreen = (props: any) => {
               <View style={[styles.inputTextView, {marginTop: '5%'}]}>
                 {/* <Text style={styles.referrerDropdownLabel}>Referrer type</Text> */}
                 <Dropdown
+                  search
                   style={styles.referrerDropdown}
-                  mode="default"
+                  mode="modal"
                   data={categoryListData}
+                  searchPlaceholder="Search..."
                   labelField={'name'}
                   valueField={'name'}
                   value={selectedCategoryValue}
                   placeholder={'Please Select an Option'}
                   placeholderStyle={styles.fieldLabelText}
                   containerStyle={{
-                    // height: '25%',
-                    // padding: '5%',
+                    padding: '5%',
+                    // paddingHorizontal: 8,
                     borderRadius: 10,
+
+                    // height: '50%',
+                    left: 0,
                   }}
                   selectedTextStyle={styles.fieldLabelText}
                   onChange={item => {

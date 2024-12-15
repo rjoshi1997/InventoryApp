@@ -1,8 +1,6 @@
 import {Dimensions, StyleSheet} from 'react-native';
 import platform from '../../../utils/platform';
-import DeviceInfo from 'react-native-device-info';
 import {theme} from '../../themes/default';
-const screen = Dimensions.get('screen');
 
 export const styles = StyleSheet.create({
   container: {
@@ -23,7 +21,7 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   bodyContent: {
-    marginLeft: 15,
+    marginLeft: 5,
     marginBottom: 15,
   },
   headerTitleText: {

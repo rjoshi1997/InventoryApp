@@ -79,7 +79,7 @@ export const StockScreen = (props: any) => {
         {/* <Divider key={Math.random()} style={styles.listDivider} /> */}
       </Pressable>
 
-      <Pressable
+      {/* <Pressable
         onPress={() => {
           // showAlertBoxForLogin('Profile');
         }}>
@@ -96,8 +96,7 @@ export const StockScreen = (props: any) => {
             />
           </View>
         </View>
-        {/* <Divider key={Math.random()} style={styles.listDivider} /> */}
-      </Pressable>
+      </Pressable> */}
     </View>
   );
 };

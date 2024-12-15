@@ -9,4 +9,7 @@ export default {
   minusButton: require('../../assets/images/ic_black_minus.png'),
   addButton: require('../../assets/images/ic_black_add.png'),
   tabIconSearch: require('../../assets/images/tab_search_icon.png'),
+  accountMyOrderIcon: require('../../assets/images/checkout.png'),
+  eyeShowIcon: require('../../assets/images/eye_icon.png'),
+  printerIcon: require('../../assets/images/printer.png'),
 };

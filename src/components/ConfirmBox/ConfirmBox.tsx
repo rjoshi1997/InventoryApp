@@ -11,6 +11,7 @@ interface ConfirmBoxProps {
   onFalseButtonText?: string;
   isPromoCode?: boolean;
   header?: string;
+  onCancelHandler?: () => void;
 }
 
 export const ConfirmBox = (props: ConfirmBoxProps) => {
@@ -26,9 +27,9 @@ export const ConfirmBox = (props: ConfirmBoxProps) => {
           <View
             style={[styles.modalView, props.isPromoCode ? {width: '80%'} : {}]}>
             <View style={styles.textGroup}>
-              {/* <Text style={styles.modalHeaderText}>
-                {props.header ? props.header : 'Printograph'}
-              </Text> */}
+              <Text style={styles.modalHeaderText}>
+                {props.header ? props.header : ''}
+              </Text>
               <Text
                 style={[
                   styles.modalMesssageText,
@@ -61,7 +62,12 @@ export const ConfirmBox = (props: ConfirmBoxProps) => {
                   styles.buttonContainer,
                   props.isPromoCode ? {width: '40%'} : {},
                 ]}
-                onPress={() => props.setModalVisible(!props.modalVisible)}>
+                onPress={() => {
+                  if (props.onCancelHandler) {
+                    props.onCancelHandler();
+                  }
+                  props.setModalVisible(!props.modalVisible);
+                }}>
                 <Text style={styles.buttonText}>
                   {props.onFalseButtonText ?? 'No'}
                 </Text>

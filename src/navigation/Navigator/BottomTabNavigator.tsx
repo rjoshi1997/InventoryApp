@@ -9,10 +9,10 @@ import {
   Pressable,
 } from 'react-native';
 import {theme} from '../../themes/default';
-import DeviceInfo from 'react-native-device-info';
 import imagePath from '../../constants/imagePath';
 import {StockScreen} from '../../screens/dashboard/Stock';
 import {BillingScreen} from '../../screens/dashboard/Billing';
+import {OrdersListing} from '../../screens/dashboard/Orders/Listing';
 
 const window = Dimensions.get('screen');
 
@@ -62,6 +62,26 @@ export const BottomTabNavigator = () => {
           tabBarIcon: ({focused}) => (
             <Image
               source={imagePath.tabIconBilling}
+              style={[
+                {width: '80%', height: '80%'},
+                focused ? {opacity: 1} : {opacity: 0.2},
+              ]}
+              resizeMode="contain"
+            />
+          ),
+        }}
+      />
+      <BottomTab.Screen
+        name="Orders"
+        // children={() => <HomeNavigator />}
+        component={OrdersListing}
+        options={{
+          headerTitle: 'INVENTORY',
+          headerTitleAlign: 'center',
+          unmountOnBlur: true,
+          tabBarIcon: ({focused}) => (
+            <Image
+              source={imagePath.accountMyOrderIcon}
               style={[
                 {width: '80%', height: '80%'},
                 focused ? {opacity: 1} : {opacity: 0.2},

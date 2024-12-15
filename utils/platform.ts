@@ -1,5 +1,4 @@
 import {Dimensions, Platform} from 'react-native';
-import DeviceInfo from 'react-native-device-info';
 const window = Dimensions.get('window');
 
 const isIOS = Platform.OS === 'ios';
@@ -12,9 +11,6 @@ const getFontSize = () => {
   let fontSize = 10;
   let m_iDeviceType = 1;
   let width = window.width;
-  if (DeviceInfo.isTablet()) {
-    m_iDeviceType = 1.25;
-  }
 
   if (width <= 480) {
     fontSize = width / (40.0 * m_iDeviceType); //= 8            8,
@@ -34,7 +30,6 @@ const getFontSize = () => {
 
   return fontSize;
 };
-
 
 export default {
   isIOS,
