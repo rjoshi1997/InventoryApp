@@ -380,9 +380,11 @@ export const SaveOrderScreen = (props: any) => {
                 style={{
                   justifyContent: 'center',
                   height: 50,
-                  width: 95,
+                  width: '80%',
                 }}>
-                <Text style={[styles.priceRowRText]}>Place Order</Text>
+                <Text style={[styles.priceRowRText, {textAlign: 'center'}]}>
+                  Place Order
+                </Text>
               </View>
             </Pressable>
           </View>

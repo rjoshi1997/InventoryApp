@@ -94,10 +94,10 @@ android {
             keyPassword 'android'
         }
         release {
-            storeFile file('inventoryApp.keystore')
-            storePassword 'inventory'
-            keyAlias 'inventory'
-            keyPassword 'inventory'
+            storeFile file('keystore.keystore')
+            storePassword 'InventoryApp'
+            keyAlias 'InventoryApp'
+            keyPassword 'InventoryApp'
         }
     }
     buildTypes {

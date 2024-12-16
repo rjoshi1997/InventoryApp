@@ -244,7 +244,7 @@ export const BillingScreen = (props: any) => {
   });
 
   return (
-    <KeyboardAvoidingView behavior="padding" style={styles.container}>
+    <View style={styles.container}>
       <View
         style={{
           paddingBottom: '5%',
@@ -289,9 +289,11 @@ export const BillingScreen = (props: any) => {
             style={{
               justifyContent: 'center',
               height: 50,
-              width: 85,
+              width: '80%',
             }}>
-            <Text style={[styles.priceRowRText]}>Save Order</Text>
+            <Text style={[styles.priceRowRText, {textAlign: 'center'}]}>
+              Save Order
+            </Text>
           </View>
         </Pressable>
       </View>
@@ -319,6 +321,6 @@ export const BillingScreen = (props: any) => {
 
         <CategoryList selectedListData={selectedListData} />
       </ScrollView>
-    </KeyboardAvoidingView>
+    </View>
   );
 };

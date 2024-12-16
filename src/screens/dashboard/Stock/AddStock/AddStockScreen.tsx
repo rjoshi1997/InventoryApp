@@ -193,33 +193,7 @@ export const AddStockScreen = (props: any) => {
   };
 
   return (
-    <View style={styles.addNewStockContainer}>
-      <View style={[styles.addNewStockView]}>
-        <SwipeListView
-          useSectionList
-          sections={[
-            {
-              data: listData,
-            },
-          ]}
-          stickySectionHeadersEnabled={true}
-          recalculateHiddenLayout={true}
-          renderItem={CartItem}
-          renderHiddenItem={ItemSliderButtons}
-          showsVerticalScrollIndicator={false}
-          rightOpenValue={-70}
-          disableRightSwipe={true}
-          closeOnRowPress
-        />
-      </View>
-
-      <View style={styles.addNewItemButtonView}>
-        <Pressable
-          onPress={() => setShowPopupBox(true)}
-          style={styles.addNewItemButton}>
-          <Text style={styles.buttonText}>+</Text>
-        </Pressable>
-      </View>
+    <>
       <PopupBox
         modalVisible={showPopupBox}
         setModalClose={setShowPopupBox}
@@ -256,7 +230,7 @@ export const AddStockScreen = (props: any) => {
               <View style={[styles.inputTextView, {marginTop: '5%'}]}>
                 <TextInput
                   keyboardType={'number-pad'}
-                  value={textBoxPriceValue}
+                  value={textBoxPriceValue ? textBoxPriceValue : ''}
                   placeholder={'Enter Price'}
                   autoCapitalize="none"
                   placeholderTextColor={theme.colorGray}
@@ -289,7 +263,7 @@ export const AddStockScreen = (props: any) => {
                   labelField={'name'}
                   valueField={'name'}
                   value={selectedCategoryValue}
-                  placeholder={'Please Select an Option'}
+                  placeholder={'Please Select Category'}
                   placeholderStyle={styles.fieldLabelText}
                   containerStyle={{
                     padding: '5%',
@@ -321,17 +295,46 @@ export const AddStockScreen = (props: any) => {
           </TouchableOpacity>
         </View>
       </PopupBox>
-      {showDeletePopupBox && (
-        <View>
-          <ConfirmBox
-            onClickHandler={removeItem}
-            modalVisible={showDeletePopupBox}
-            setModalVisible={setShowDeletePopupBox}
-            allowOnlySingleButton={false}
-            message={'Are you sure you want delete?'}
+      <View style={styles.addNewStockContainer}>
+        <View style={[styles.addNewStockView]}>
+          <SwipeListView
+            useSectionList
+            sections={[
+              {
+                data: listData,
+              },
+            ]}
+            stickySectionHeadersEnabled={true}
+            recalculateHiddenLayout={true}
+            renderItem={CartItem}
+            renderHiddenItem={ItemSliderButtons}
+            showsVerticalScrollIndicator={false}
+            rightOpenValue={-70}
+            disableRightSwipe={true}
+            closeOnRowPress
           />
         </View>
-      )}
-    </View>
+
+        <View style={styles.addNewItemButtonView}>
+          <Pressable
+            onPress={() => setShowPopupBox(true)}
+            style={styles.addNewItemButton}>
+            <Text style={styles.buttonText}>+</Text>
+          </Pressable>
+        </View>
+
+        {showDeletePopupBox && (
+          <View>
+            <ConfirmBox
+              onClickHandler={removeItem}
+              modalVisible={showDeletePopupBox}
+              setModalVisible={setShowDeletePopupBox}
+              allowOnlySingleButton={false}
+              message={'Are you sure you want delete?'}
+            />
+          </View>
+        )}
+      </View>
+    </>
   );
 };
